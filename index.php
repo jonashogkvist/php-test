@@ -6,14 +6,23 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
+<?php
+    $bookName = "Dark Matter";
+    $read = false;
+
+    if ($read) {
+        $message = "You have read $bookName";
+    } else {
+        $message = "You have NOT read $bookName";
+    }
+?>
+
     <h1>
-        <?php
-            $greeting = "Hello";
-            $greetReceiver = "World";
-            echo "$greeting $greetReceiver";
-        ?>
+        <?= $message ?>
     </h1>
 </body>
 </html>
