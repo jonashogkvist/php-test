@@ -10,7 +10,9 @@
 <body>
     <h1>
         <?php
-            echo ("Hello World!");
+            $greeting = "Hello";
+            $greetReceiver = "World";
+            echo "$greeting $greetReceiver";
         ?>
     </h1>
 </body>

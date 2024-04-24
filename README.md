@@ -1,3 +1,3 @@
 # php-test
 
-my php playground
+my php playground using wsl2 integration
