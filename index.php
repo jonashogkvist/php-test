@@ -5,24 +5,27 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Demo</title>
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
 <?php
-    $bookName = "Dark Matter";
-    $read = false;
-
-    if ($read) {
-        $message = "You have read $bookName";
-    } else {
-        $message = "You have NOT read $bookName";
-    }
+    $books = [
+            "Do Androids Dream of Electric Sheep",
+            "The Langoliers",
+            "Hail Mary"
+    ]
 ?>
 
     <h1>
-        <?= $message ?>
+        Recommended Books
     </h1>
+
+    <ul>
+        <?php foreach ($books as $book) : ?>
+            <li> <?= $book ?> </li>
+        <?php endforeach; ?>
+    </ul>
 </body>
 </html>

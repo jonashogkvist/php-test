@@ -5,8 +5,11 @@ body {
     min-height: 100vh;
     display: flex;
     background-color: aliceblue;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-h1 {
-    margin: auto;
+ul {
+    list-style: none;
 }
