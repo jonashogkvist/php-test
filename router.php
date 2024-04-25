@@ -1,5 +1,7 @@
 <?php
 
+use JetBrains\PhpStorm\NoReturn;
+
 #[NoReturn] function abort($code = 404): void
 {
     http_response_code($code);
