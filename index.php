@@ -1,5 +1,5 @@
 <?php
-
+require "functions.php";
 
 $heading = "Home";
 
@@ -9,6 +9,7 @@ function dd($value) {
     echo "<pre>";
     die();
 }
+
 
 
 
