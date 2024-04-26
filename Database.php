@@ -1,13 +1,16 @@
 <?php
-require "config.php";
+
+
 class Database
 {
     public PDO $connection;
-    public function __construct()
+
+    public function __construct($config, $username = 'root', $password = '')
     {
-        global $DB_USERNAME, $DB_PASSWORD;
-        $dsn = "mysql:host=localhost;port=33061;dbname=myapp;charset=utf8mb4";
-        $this->connection = new PDO($dsn, $DB_USERNAME, $DB_PASSWORD);
+        $dsn = 'mysql:' . http_build_query($config, '', ';');
+        $this->connection = new PDO($dsn, $username, $password, [
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        ]);
     }
 
     public function query($query)
