@@ -14,3 +14,10 @@ function urlIs($value): bool
     echo "<pre>";
     die();
 }
+
+function authorize($condition, $status = Response::FORBIDDEN): void
+{
+    if (!$condition) {
+        abort($status);
+    }
+}
