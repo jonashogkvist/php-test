@@ -4,7 +4,6 @@ How to Run
 
 Make a config.php in main folder and include following and insert with your own mysql data: 
 
-<?php
 return [
     'database' =>
         [   'host' => '_',
