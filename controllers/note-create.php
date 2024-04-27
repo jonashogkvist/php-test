@@ -22,8 +22,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'user_id' => 5,
         ]);
     }
-
-
 }
 
 require 'views/note-create.view.php';
