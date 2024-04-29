@@ -1,5 +1,7 @@
 <?php
 
+namespace Core;
+use PDO;
 
 class Database
 {
@@ -18,7 +20,6 @@ class Database
     {
         $this->statement = $this->connection->prepare($query);
         $this->statement->execute($params);
-
         return $this;
     }
 
@@ -33,7 +34,6 @@ class Database
         if (!$result) {
             abort();
         }
-
         return $result;
     }
 
